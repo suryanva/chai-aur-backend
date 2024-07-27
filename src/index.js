@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { DB_NAME } from "./constants";
+import dotenv from "dotenv";
+import connectDB from "./db/index.js";
 
 // import express from "express";
 
@@ -19,3 +19,9 @@ import { DB_NAME } from "./constants";
 //     console.log("ERROR:", error);
 //   }
 // })();
+
+dotenv.config({
+  path: "./env",
+});
+
+connectDB();
